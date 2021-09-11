@@ -17,7 +17,7 @@ func main() {
 		1: First user argument (the reddit url)
 		2: Second user argument (the location of the saved media)
 	*/
-	if len(os.Args) == 2 {
+	if len(os.Args) != 3 {
 		fmt.Println("ERROR: Invalid arguments")
 		fmt.Println("Usage:")
 		fmt.Println("  redditdl <redditURL> <fileName (no file extenchion)>")
