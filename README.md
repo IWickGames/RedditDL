@@ -22,4 +22,4 @@ Reddit-dl only requires that ffmpeg is installed and aviable by running `ffmpeg`
 This project is just kinda for fun and if there is a demand I will work on keeping it updated but if you want to help in cleaning up the code (yes I am new to GoLang and this is just me learning more about it) or improving it then feel free to make a pull request. I will try to keep checking for new requests.
 
 ## Building
-To build this project you require [GoLang](https://golang.org/dl/). After you install it you install it in this root directory with `go.mod` and `main.go` execute this command "`go build .`" It will then output a file for your operating system that you can run.
+To build this project you require [GoLang](https://golang.org/dl/). After you install it you install it in this root directory with `go.mod` and `main.go` execute this command `go build .` It will then output a file for your operating system that you can run.
