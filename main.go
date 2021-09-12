@@ -72,7 +72,7 @@ func main() {
 				fmt.Println(err.Error())
 				os.Exit(1)
 			}
-			fmt.Println("Successfully downloaded media to ", os.Args[2]+"."+fileExt)
+			fmt.Println("Successfully downloaded media to", os.Args[2]+"."+fileExt)
 			os.Exit(0)
 		}
 
@@ -83,7 +83,7 @@ func main() {
 			fmt.Println(err.Error())
 			os.Exit(1)
 		}
-		fmt.Println("Successfully downloaded media to ", os.Args[2]+"."+fileExt)
+		fmt.Println("Successfully downloaded media to", os.Args[2]+"."+fileExt)
 		os.Exit(0)
 
 	case "VIDEO":
@@ -100,7 +100,7 @@ func main() {
 			fmt.Println(err.Error())
 			os.Exit(1)
 		}
-		fmt.Println("Successfully downloaded media to ", os.Args[2]+".mp4")
+		fmt.Println("Successfully downloaded media to", os.Args[2]+".mp4")
 		os.Exit(0)
 
 	// Unknown type was detected so display an error
