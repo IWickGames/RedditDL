@@ -16,7 +16,7 @@ Reddit-DL will automaticly convert to mp4 using FFMPEG and images will always be
 ---
 
 ## Requirements
-Reddit-dl only requires that ffmpeg is installed and aviable by running `ffmpeg` once this is complete you can download videos fine. Images **do not** need ffmpeg to download, they will work nativly.
+Reddit-dl only requires that ffmpeg is installed and aviable by running `ffmpeg` once this is complete you can download videos fine. Images **do not** need ffmpeg to download, they will work nativly. Gif files also **require ffmpeg** as they are stored as mp4 files in reddit but this project will use ffmpeg to convert it to a gif for you automaticly.
 
 ## About
 This project is just kinda for fun and if there is a demand I will work on keeping it updated but if you want to help in cleaning up the code (yes I am new to GoLang and this is just me learning more about it) or improving it then feel free to make a pull request. I will try to keep checking for new requests.
