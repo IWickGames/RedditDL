@@ -63,6 +63,12 @@ func main() {
 		fmt.Println("[Download] Media type: IMAGE (" + fileExt + ")")
 		fmt.Println("[Download] Starting download of media (this may take some time)")
 
+		// Check if the output file already exists
+		if _, err := os.Stat(os.Args[2] + "." + fileExt); !os.IsNotExist(err) {
+			fmt.Println("ERROR:", os.Args[2]+"."+fileExt, "already exists")
+			os.Exit(1)
+		}
+
 		// Checks if the format is gif as reddit stores gifs differently and conversion is needed
 		if fileExt == "gif" {
 			fmt.Println("[ffmpeg] Converting mp4 to gif")
@@ -89,6 +95,13 @@ func main() {
 	case "VIDEO":
 		fmt.Println("[Download] Media type: VIDEO (" + fileExt + ")")
 		fmt.Println("[Download] Starting download of media (this may take some time)")
+
+		// Check if the output file already exists
+		if _, err := os.Stat(os.Args[2] + "." + fileExt); !os.IsNotExist(err) {
+			fmt.Println("ERROR:", os.Args[2]+"."+fileExt, "already exists")
+			os.Exit(1)
+		}
+
 		/*
 			Reddit uses .m3u8 files to store videos
 			Reddit-DL uses FFMPEG to convert to a .mp4 file
