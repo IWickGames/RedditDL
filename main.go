@@ -97,8 +97,8 @@ func main() {
 		fmt.Println("[Download] Starting download of media (this may take some time)")
 
 		// Check if the output file already exists
-		if _, err := os.Stat(os.Args[2] + "." + fileExt); !os.IsNotExist(err) {
-			fmt.Println("ERROR:", os.Args[2]+"."+fileExt, "already exists")
+		if _, err := os.Stat(os.Args[2] + ".mp4"); !os.IsNotExist(err) {
+			fmt.Println("ERROR:", os.Args[2]+".mp4", "already exists")
 			os.Exit(1)
 		}
 
