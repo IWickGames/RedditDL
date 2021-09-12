@@ -50,7 +50,7 @@ func main() {
 
 	// Reddit-DL automaticly uses the first link as the main media url
 	// This is selected and displayed here
-	fmt.Println("[Parsor] Using:", links[0])
+	fmt.Println("[Parser] Using:", links[0])
 
 	/*
 		Find the media type of the media url
