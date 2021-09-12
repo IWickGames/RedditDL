@@ -17,6 +17,16 @@ func ConvertM3U8(url string, outputFile string) error {
 }
 
 /*
+Converts mp4 files to gif files
+Reddit stores gif files as mp4 so the conversion is done automaticly
+*/
+func ConvertGIF(url string, outputFile string) error {
+	com := exec.Command("ffmpeg", "-i", url, outputFile)
+	err := com.Run()
+	return err
+}
+
+/*
 Downloads an image from a url
 */
 func DownloadImage(url string, saveLocation string) error {

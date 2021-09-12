@@ -55,15 +55,18 @@ func GetMediaUrls(data string) []string {
 Supplied a url will return a string containing the type of media the url leads to
 Possible values are IMAGE, VIDEO, UNKNOWN
 */
-func GetMediaType(url string) string {
+func GetMediaType(url string) (string, string) {
 	if strings.HasPrefix(url, "https://i.redd.it") {
-		return "IMAGE"
+		return "IMAGE", strings.ToLower(strings.Split(url, ".")[1])
 	}
 	if strings.HasPrefix(url, "https://preview.redd.it") {
-		return "IMAGE"
+		cache := strings.Split(url, "/")[3]
+		cache = strings.Split(cache, ".")[1]
+		cache = strings.Split(cache, "?")[0]
+		return "IMAGE", strings.ToLower(cache)
 	}
 	if strings.HasPrefix(url, "https://v.redd.it") {
-		return "VIDEO"
+		return "VIDEO", "m3u8"
 	}
-	return "UNKNOWN"
+	return "UNKNOWN", "UNKNOWN"
 }
