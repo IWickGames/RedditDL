@@ -57,7 +57,7 @@ Possible values are IMAGE, VIDEO, UNKNOWN
 */
 func GetMediaType(url string) (string, string) {
 	if strings.HasPrefix(url, "https://i.redd.it") {
-		return "IMAGE", strings.ToLower(strings.Split(url, ".")[1])
+		return "IMAGE", strings.ToLower(strings.Split(url, ".")[3])
 	}
 	if strings.HasPrefix(url, "https://preview.redd.it") {
 		cache := strings.Split(url, "/")[3]
